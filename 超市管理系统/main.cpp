@@ -40,6 +40,7 @@ int main() {
 			break;
 		case 0:
 			printf("退出系统\n");
+			return 0;
 			break;
 		default:
 			printf("无效操作\n");
