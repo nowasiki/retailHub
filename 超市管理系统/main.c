@@ -13,12 +13,7 @@ int main() {
 	);
 	while (1) {
 		showMenu();
-		if((scanf("%d", &choice)) != 1) {
-			printf("*Err:输入无效*\n请输入操作编号>");
-			while(getchar() != '\n'); // 清除输入缓冲区
-			continue;
-		}
-		switch (choice) {
+		switch (input()) {
 		case 1:
 			printf("建立库存信息\n");
 			break;
@@ -35,7 +30,7 @@ int main() {
 			printf("退出系统\n");
 			return 0;
 			break;
-		default:
+		case -1:
 			printf("无效操作\n");
 			break;
 		}

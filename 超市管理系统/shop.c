@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include "shop.h"
 
 void showMenu() {
@@ -11,4 +12,14 @@ void showMenu() {
 		"0. 退出系统\n"
 	);
 	printf("请输入操作编号>");
+}
+
+int input() {
+	int input = -1;
+	if ((scanf("%d", &input)) != 1) {
+		printf("*Err:输入无效*\n请输入操作编号>");
+		while (getchar() != '\n'); // 清除输入缓冲区
+		return -1;
+	}
+	return input;
 }
