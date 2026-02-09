@@ -2,14 +2,6 @@
 #include <stdio.h>
 #include "shop.h"
 
-struct item {
-	char name[50];
-	char id[20];
-	float in_price;
-	float out_price;
-	int num;
-};
-
 void showMenu() {
 	printf(
 		"ÇëÑ¡Ôñ²Ù×÷£º\n"
